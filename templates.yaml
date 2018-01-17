@@ -22,6 +22,14 @@ rijksmuseum_tickets: The Rijksmuseum is open from X till Y, and you don’t need
 
 email_follow_up: Yes, all done! Can I help you with anything else?
 
+list_museums: Here are the top 3 museums and galleries that couples like to visit {{museums}}. Do you want more details about one of these?
+
+museum_ticket: The {{museum}} is open {{time_range}}, and you don't need to book a ticket in advance, just show up with the QR code from Booking.com. You'll find it in your email and it will help you to skip the line, would you like me to resend this email
+
+other_places: Would you like to learn about other places to go in amsterdam
+
+list_breweries: The top three breweries in Amsterdam are {{breweries}}. Can I help you with anything else
+
 
 trip_open: Hi there! Are you ready to go on a trip with me?
 
