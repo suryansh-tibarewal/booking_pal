@@ -6,6 +6,7 @@ import urllib
 import re
 import random
 from transitions import Machine
+from transitions import State
 
 # --------------------------------------------------------------------------------------------
 # INITIALISATION
@@ -22,27 +23,52 @@ def new_ask():
 
 # --------------------------------------------------------------------------------------------
 
-states=[
-    State(name='initial', on_entry=welcome()),
-    State(name='manage_booking', on_entry=manage_booking())
-    ]
+#states=[
+#    State(name='initial', on_entry=welcome()),
+#    State(name='manage_booking', outn_entry=manage_booking())
+#    ]
 
 # And some transitions between states. We're lazy, so we'll leave out
 # the inverse phase transitions (freezing, condensation, etc.).
-transitions = [
-    { 'trigger': 'next', 'source': 'initial', 'dest': 'manage_booking' },
-    { 'trigger': 'back', 'source': 'manage_booking', 'dest': 'initial' }
-]
+#transitions = [
+#    { 'trigger': 'next', 'source': 'initial', 'dest': 'manage_booking' },
+#    { 'trigger': 'back', 'source': 'manage_booking', 'dest': 'initial' },
+#]
 
-machine = Machine(booking_pal, states=states, transitions=transitions, initial='liquid')
+#machine = Machine(booking_pal, states=states, transitions=transitions, initial='initial')
 
-@ask.intent('ReviewLatestIntent')
-def launchReview(show):
-    if (show is None):
-        reprompt_show = render_template("reprompt_show")
-        return question(reprompt_show)
-    else:
-        return statement(show) #\
+@ask.intent('FollowUpWelcome')
+def followUpWelcome():
+    follow_up_welcome = render_template('follow_up_welcome')
+    return question(follow_up_welcome)
+
+@ask.intent('FollowUpActivities')
+def followUpWelcome():
+    follow_up_activities = render_template('follow_up_activities')
+    return question(follow_up_activities)
+
+@ask.intent('FollowUpThingsToDo')
+def followUpWelcome():
+    follow_up_things_to_do = render_template('follow_up_things_to_do')
+    return question(follow_up_things_to_do)
+
+@ask.intent('FollowUpInformationMuseum')
+def followUpWelcome():
+    follow_up_information_museum = render_template('follow_up_information_museum')
+    return question(follow_up_information_museum)
+
+@ask.intent('MuseumDetails')
+def followUpWelcome():
+    rijksmuseum_details = render_template('rijksmuseum_details')
+    return question(rijksmuseum_details)
+
+#@ask.intent('ReviewLatestIntent')
+#def launchReview(show):
+#    if (show is None):
+#        reprompt_show = render_template("reprompt_show")
+#        return question(reprompt_show)
+#    else:
+#        return statement(show) #\
             #.standard_card(title=review_title + " - " + score,
                             #text=description
                             #small_image_url=image_url,

@@ -1,4 +1,4 @@
-welcome: Welcome, to one of my homebrew applications. What would you like me to do?
+welcome: Hi Angel, you have an upcoming booking in Amsterdam on 17 February, and you have an upcoming booking in Beijing on 2 April. Which one do you want to talk about?
 
 reprompt: I didn't quite get that. Please state again what you would like me to do.
 
@@ -6,10 +6,21 @@ goodbye: See you again next time!
 
 
 
-latest_review: The latest episode of {{ show }}, called, {{ episode }}, got a score of {{ score }} on IGN.
+follow_up_welcome: Okay. Would you like to check your booking details or find out more about the destination?
 
-reprompt_show: I didn't quite understand that. What show did you want the review from?
+#reprompt_show: I didn't quite understand that. What show did you want the review from?
 
+follow_up_activities: Do you want to talk about things to see, things to do or places to eat and drink?
+
+follow_up_things_to_do: Are you interested in museums, galleries or general entertainment?
+
+follow_up_information_museum: Here are the top three museums in Amsterdam that couples like to visit 1. the Rijksmuseum, 2. the Van Gogh Museum and 3. the Stedelijk Museum. Do you want more details about one of these? 
+
+rijksmuseum_details: The Rijksmuseum is open daily from 9am until 5pm and you don’t need to book a ticket in advance, just show up with the QR code from Booking.com. You’ll find it in your email and it will help you to skip the line! Would you like me to resend this email?
+
+rijksmuseum_tickets: The Rijksmuseum is open from X till Y, and you don’t need to book a ticket in advance, just show up with the QR code from Booking.com. You’ll find it in your email and it will help you to skip the line! Your QR code is in an email we sent you, would you like me to resend this email?
+
+email_follow_up: Yes, all done! Can I help you with anything else?
 
 
 trip_open: Hi there! Are you ready to go on a trip with me?
